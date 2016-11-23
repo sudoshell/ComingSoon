@@ -29,7 +29,7 @@
       <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
-      
+
       <div class="container container-table">
         <form role="form" id="RegForm" accept-charset="UTF-8" method="POST" onsubmit="RegToken(); return false;">
           <div class="row vertical-center-row">
@@ -52,11 +52,11 @@
                     </span>
                     <div id="OPerationType">
                       <label class="radio-inline">
-                        <input type="radio" name="typeofop">
+                        <input type="radio" name="typeofop" id="depositiss" required="true" />
                         Deposit
                       </label>
                       <label class="radio-inline">
-                        <input type="radio" name="typeofop">
+                        <input type="radio" name="typeofop" id="withdrawiss" required="true" />
                         Withdraw
                       </label>
                     </div>
@@ -69,7 +69,7 @@
                     <span class="input-group-addon">
                       <label for="amountininr">Amount: </label>
                     </span>
-                    <input type="text" class="form-control" id="amountininr" name="amountininr" />
+                    <input type="text" class="form-control" id="amountininr" name="amountininr" required="true" />
                     <span class="help-block"></span>
                   </div>
                 </div>
