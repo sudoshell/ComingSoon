@@ -1,0 +1,89 @@
+body {
+    color: #747704;
+    font-weight: 300;
+    /*background-image: url('HD-Wallpaper.jpg');*/
+    background-color: black;
+    background-size: 100% 100%;
+}
+hr {
+    padding: 0;
+}
+html,
+ul,
+div {
+    height: 100%;
+    margin: 0;
+}
+h3,
+p {
+    text-align: right;
+}
+#chlngcontnt {
+    text-align: center;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+.row,
+.col-md-12 {
+    padding: 0;
+}
+#navi {
+    padding: 0;
+    border-right: 4px #B5AA63 inset;
+    border-bottom: 4px #2A3238 inset;
+    border-top: 4px #E55A63 outset;
+}
+#navi li {
+    background-color: #263238;
+    padding-top: 19px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 4px gray ridge;
+}
+#navi a:hover {
+    color: red;
+    font-size: 20px;
+    background-color: #212121;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    border-bottom: 4px #432156 ridge;
+}
+#navi a {
+    text-decoration: none;
+    color: white;
+}
+#navi ul {
+    padding: 0;
+    list-style: none;
+}
+.complete {
+    background-color: green !important;
+}
+.container {
+    width: 100%;
+}
+.text-muted {
+    color: #BCBBBB;
+}
+.text-thick {
+    font-weight: 600;
+}
+.title-logo {
+    margin-top: 20px;
+}
+.title-super {
+    font-size: 60px;
+}
+#MainSCRContent {
+    position: relative;
+    background-color: gray;
+    margin-top: 10em;
+    margin-left: 35em;
+    margin-right: 5em;
+    height: 100% !important;
+    width: 55%;
+}
