@@ -26,20 +26,29 @@ var RegToken = function(){
   var mobno = document.getElementById('mobilenumber').value;
   var optype = "";
   if (document.getElementById('withdrawiss').checked){
-    optype = "W";
+    optype = "WITHDRAW";
   }
   else if (document.getElementById('depositiss').checked){
-    optype = "D";
+    optype = "DEPOSIT";
   }
   else{
     optype = "";
   }
   var amtinr = document.getElementById('amountininr').value;
-  var msg = "mobno: " + mobno + "type: " + optype + "amt: " + amtinr +" thanks";
-  
-  RequestData("POST", "https://spechide.shrimadhav.uk/functions/cors.php" + "?q=" + encodeURIComponent(formdata), "", function(u, r){
+  var message = "You have selected " + optype + ", and entered an amount of Rs" + amtinr + "!";
+  var msg = "?mobno=" + mobno + "&message=" + encodeURIComponent(message);
+  RequestData("POST", "https://spechide-144910.appspot.com/CORS/SendSMS/" + msg, "", function(u, r){
     console.log(u);
     console.log(r);
+    var jsonobj = JSON.parse(r);
+    var mid = jsonobj.message;
+    var sts = jsonobj.type;
+    if(sts == "success"){
+      document.getElementById('RegForm').innerHTML = '<button class="form-control" onclick="window.location.reload();">ReFresh the Webpage</button>';
+    }
+    else{
+      alert("this should never occur! unless the smsgateway suspended my account.\r\n" + "URL: " + u + "\r\nRESPONSE: " + r);
+    }
   });
 };
 
