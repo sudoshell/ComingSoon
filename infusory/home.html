@@ -34,56 +34,76 @@
       <div class="row">
       	<div class="col-md-3" id="navi">
       		<ul>
-      			<a onClick="chlngcontnt_js(1)">
-      				<li>Link 1</li>
+      			<a data-toggle="modal" data-target="#EditModal">
+      				<li>Edit</li>
       			</a>
-      			<a onClick="chlngcontnt_js(2)">
-      				<li>Link 2</li>
-      			</a>
-      			<a onClick="chlngcontnt_js(3)">
-      				<li>Link 3</li>
-      			</a>
-      			<a onClick="chlngcontnt_js(4)">
-      				<li>Link 4</li>
-      			</a>
-      			<a onClick="chlngcontnt_js(5)">
-      				<li>Link 5</li>
-      			</a>
-      			<a onClick="chlngcontnt_js(6)">
-      				<li>Link 6</li>
-      			</a>
-      			<a onClick="chlngcontnt_js(7)">
-      				<li>Link 7</li>
-      			</a>
-      			<a onClick="chlngcontnt_js(8)">
-      				<li>Link 8</li>
-      			</a>
-      			<a onClick="chlngcontnt_js(9)">
-      				<li>Link 9</li>
-      			</a>
-      			<a onClick="chlngcontnt_js(10)">
-      				<li>Link 10</li>
+
+      			<a href="javascript: void(0);">
+      				<li>Log out</li>
       			</a>
       		</ul>
       	</div>
       	<div class="col-md-9 text-right text-uppercase" id="chlngcontnt">
-      		<h3><a href="logout.php">log out</a></h3>
-      		<p>Welcome user #123</p>
+      		<h3>&nbsp;</h3>
+      		<p style="text-align: left;color: #337ab7;">BANK ID: _____</p>
+          <p style="text-align: right;color: #337ab7;">CURRENT BALANCE: _____</p>
+          <p style="text-align: right;color: #337ab7;">NO. OF PEOPLE IN Q: _____</p>
       	</div>
         <div id="MainSCRContent">
-          <img class="img-responsive" src="//placehold.it/150x150" />
-          placeholder for current token number
-          <img class="img-responsive" src="//placehold.it/150x150" />
-          <img class="img-responsive" src="//placehold.it/150x150" />
-          <img class="img-responsive" src="//placehold.it/150x150" />
-          placeholder for current token number
-          <img class="img-responsive" src="//placehold.it/150x150" />
-          <img class="img-responsive" src="//placehold.it/150x150" />
-          <img class="img-responsive" src="//placehold.it/150x150" />
-          placeholder for current token number
-          <img class="img-responsive" src="//placehold.it/150x150" />
+          <div class="row text-center">
+            placeholder for current token number
+            <img class="img-responsive" src="//placehold.it/150x150" />
+            placeholder for current token number
+          </div>
+
+          <div class="qweeqwqwq col-sm-6 col-md-6 col-xs-6 col-lg-6">
+            <button class="form-control">SKIP</button>
+          </div>
+          <div class="qweeqwqwq col-sm-6 col-md-6 col-xs-6 col-lg-6">
+            <button class="form-control">NEXT</button>
+          </div>
         </div>
       </div>
 
+<!-- Modal -->
+<div id="EditModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Edit Container</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" id="EditForm" accept-charset="UTF-8" method="POST" onsubmit="RegToken(); return false;">
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <label for="balancetext">Add Money to Bank Balance: </label>
+              </span>
+              <input type="text" class="form-control" id="balancetext" name="balancetext" required="true" />
+              <span class="help-block"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-default">Add Money</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+      <!-- jQuery JavaScript  -->
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <!-- BootStrap JavaScript -->
+      <script type="text/javascript" src="js/bootstrap.js"></script>
+      <!-- Custom Functions  -->
+      <script type="text/javascript" src="js/script.js" charset="UTF-8"></script>
     </body>
   </html>

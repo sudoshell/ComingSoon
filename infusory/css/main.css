@@ -1,22 +1,21 @@
 body {
-    color: #747704;
     font-weight: 300;
     /*background-image: url('HD-Wallpaper.jpg');*/
     background-color: black;
     background-size: 100% 100%;
+}
+.form-control {
+  font-weight: bold;
+  color: #000;
 }
 hr {
     padding: 0;
 }
 html,
 ul,
-div {
+div#chlngcontnt {
     height: 100%;
     margin: 0;
-}
-h3,
-p {
-    text-align: right;
 }
 #chlngcontnt {
     text-align: center;
@@ -65,6 +64,9 @@ p {
 }
 .container {
     width: 100%;
+}
+.qweeqwqwq {
+  padding-top: 1.5em;
 }
 .text-muted {
     color: #BCBBBB;
