@@ -18,7 +18,7 @@
       <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
 
       <!-- css files -->
-      <link rel="stylesheet" href="https://shrimadhav.uk/css/smc-fonts.css" type="text/css">
+      <link rel="stylesheet" href="https://smc.org.in/fonts/css/fonts.css" type="text/css">
       <link rel="stylesheet" href="https://shrimadhav.uk/css/bootstrap.css" type="text/css">
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -29,6 +29,60 @@
       <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
+      
+      <div class="container container-table">
+        <form role="form" id="RegForm" accept-charset="UTF-8" method="POST" onsubmit="RegToken(); return false;">
+          <div class="row vertical-center-row">
+            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <label for="mobilenumber">Mobile Number: </label>
+                    </span>
+                    <input type="text" class="form-control" id="mobilenumber" name="mobilenumber" maxlength="10" required="true" />
+                    <span class="help-block"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <label for="typeofop">Type of Operation: </label>
+                    </span>
+                    <div id="OPerationType">
+                      <label class="radio-inline">
+                        <input type="radio" name="typeofop">
+                        Deposit
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="typeofop">
+                        Withdraw
+                      </label>
+                    </div>
+                    <span class="help-block"></span>
+                  </div>
+                </div>
+
+                <div class="form-group" id="AmountINR">
+                  <div class="input-group">
+                    <span class="input-group-addon">
+                      <label for="amountininr">Amount: </label>
+                    </span>
+                    <input type="text" class="form-control" id="amountininr" name="amountininr" />
+                    <span class="help-block"></span>
+                  </div>
+                </div>
+
+            </div>
+            <div class="col-sm-6 col-md-6 col-xs-6 col-lg-6">
+              <div class="form-group">
+                <button type="submit" class="btn btn-default">Get Token</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
 
       <!-- jQuery JavaScript  -->
       <script type="text/javascript" src="https://shrimadhav.uk/js/jquery.js"></script>
